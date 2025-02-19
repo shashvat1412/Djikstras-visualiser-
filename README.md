@@ -1,19 +1,20 @@
 
-#  Parking Lot System 🚗🏍️🚚
+# Parking Lot System 🚗🏍️🚚
 
 A **multi-floor parking lot system** with thread-safe operations, efficient spot allocation, and a built-in test suite. The system supports **Cars, Bikes, and Trucks**, ensuring optimal space utilization and quick vehicle lookups.  
 
 ✅ **Single-file implementation (`cr1.py`)** containing the entire code.  
- 
+✅ **Thread-safe operations using `threading.Lock` for concurrency.**  
 ✅ **17+ test cases covering edge scenarios and stress tests.**  
 
 ---
 
-## 📌 Features  
-- **Object-Oriented Design** – `ParkingLot`, `Floor`, and `Vehicle` classes for modularity.  
-- **Optimized Spot Allocation** – Min-Heap for O(1) retrieval and sorted spot checks for Trucks.  
-- **Concurrency Handling** – Thread synchronization for safe parallel operations.  
-- **Comprehensive Test Suite** – Edge cases, fragmented parking, and stress scenarios included.  
+## 📌 Key Features  
+- **Vehicle Class Hierarchy** – Polymorphic `Vehicle` classes (`Car`, `Bike`, `Truck`) with type-specific spot requirements.  
+- **Nearest Spot Allocation** – Uses **Min-Heap (`heapq`)** for **O(1) spot assignment** (cars/bikes) and sorted checks for trucks.  
+- **Thread Safety** – **Per-floor locks** ensure safe concurrent operations.  
+- **Backward Compatibility** – Supports both `Vehicle` objects and string-based types (e.g., `"Car"`, `"Truck"`).  
+- **Test Suite** – 17+ test cases covering edge scenarios (**fragmented spots, duplicates, stress tests**).  
 
 ---
 
@@ -27,6 +28,7 @@ A **multi-floor parking lot system** with thread-safe operations, efficient spot
 ```bash
 git clone https://github.com/shashvat1412/Design-a-Parking-Lot-System-Assigment-5-.git
 cd Design-a-Parking-Lot-System-Assigment-5-
+# No additional installation steps required (uses standard libraries).
 ```
 
 ---
@@ -72,8 +74,8 @@ print(parking_lot.is_full())
 - **Global lock for `vehicle_map`** ensures thread-safe lookups.  
 
 ### **Efficiency**  
-- **Min-Heap (`heapq`)** ensures **fast nearest-spot allocation**.  
-- **Set operations (`set()`)** provide **O(1) vehicle presence checks**.  
+- **Min-Heap (`heapq`)** ensures fast nearest-spot allocation for cars and bikes.  
+- **Set (`set()`)** provides O(1) membership checks for available spots.  
 
 ---
 
@@ -81,8 +83,10 @@ print(parking_lot.is_full())
 
 ### **Run all test cases**  
 ```bash
+# Run all test cases (included in cr1.py)
 python cr1.py
 ```
+
 ✅ **Test Cases Included:**  
 - `test_park_truck()` → Ensures trucks get consecutive spots.  
 - `test_truck_fragmented_spots()` → Trucks cannot park in non-consecutive spots.  
@@ -93,11 +97,11 @@ python cr1.py
 ## 🤝 Contribution  
 
 Open an **issue** or **PR** for:  
-- Adding **new vehicle types** (e.g., `ElectricCar`).  
-- Implementing a **CLI/API interface**.  
+- Reporting bugs or suggesting improvements.  
+- Adding new vehicle types (e.g., `ElectricCar`).  
+- Implementing a CLI/API interface.  
 
 ---
-
 
 
 
