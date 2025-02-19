@@ -26,8 +26,8 @@ A **multi-floor parking lot system** with thread-safe operations, efficient spot
 
 ### **Clone the Repository**  
 ```bash
-git clone https://github.com/shashvat1412/parking-lot-system.git
-cd parking-lot-system
+git clone https://github.com/shashvat1412/Design-a-Parking-Lot-System-Assigment-5-.git
+cd Design-a-Parking-Lot-System-Assigment-5-
 ```
 
 ---
