@@ -4,8 +4,7 @@
 A **multi-floor parking lot system** with thread-safe operations, efficient spot allocation, and a built-in test suite. The system supports **Cars, Bikes, and Trucks**, ensuring optimal space utilization and quick vehicle lookups.  
 
 ✅ **Single-file implementation (`cr1.py`)** containing the entire code.  
-✅ **Min-Heap (`heapq`) for nearest spot allocation.**  
-✅ **Thread-safe operations using `threading.Lock` for concurrency.**  
+ 
 ✅ **17+ test cases covering edge scenarios and stress tests.**  
 
 ---
