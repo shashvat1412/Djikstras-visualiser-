@@ -1,4 +1,5 @@
 Parking Lot System 🚗🏍️🚚
+
 A multi-floor **parking lot system** that supports multiple vehicle types (**Car, Bike, Truck**) with **thread-safe operations**, **efficient spot allocation**, and a built-in **test suite**.  
 
 ✅ **Single-file implementation:** The entire code is in `cr1.py`.  
